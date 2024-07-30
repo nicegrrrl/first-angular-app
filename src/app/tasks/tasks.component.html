@@ -2,10 +2,17 @@
   <app-new-task (cancel)="onCancelAddTask()" />
 } -->
 
-<app-new-task
+<!-- <app-new-task
+  [userId]="userId"
   *ngIf="isAddingTask"
   (cancel)="onCancelAddTask()"
   (add)="onAddTaskt($event)"
+/> -->
+
+<app-new-task
+  [userId]="userId"
+  *ngIf="isAddingTask"
+  (close)="onCloseAddTask()"
 />
 
 <section id="tasks">
